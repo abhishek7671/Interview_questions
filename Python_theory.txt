@@ -1,0 +1,512 @@
+https://chatgpt.com/share/67eebce0-d2f0-8010-8e22-ae8d23fefabd
+
+
+
+
+what is dynamic in python?
+Difference between is and == ?
+What is decorator?
+What is Generator?
+What is iterator and its types?
+Difference between Generator and iterators?
+Difference between list and tuple?
+What are the Types of comprehensions and explain each type?
+What is function, what are the types of functions and difference between normal function and recursive function?
+What is lambda and explain that detailed withits functions and all?
+What is map, filter and reduce?
+what is module and package?
+What is pickling and unplicking?
+What is class?
+what is object?
+What is self, __init__?
+what is instance method, class method, static method?
+what are the oops 4 pillars?
+what is abstract method, abstract class, concrete method?
+Difference  between abstract class and interface?
+What is polymorphism and its types and real example?
+What is inheritence and its types?
+What is multithreading and multipocessing and its types?
+what is Global interpreter lock where it is effected?
+Difference between synchronous and asynchronous? and its real world examples?
+
+
+
+
+
+
+problem solving questions in python:
+
+1.remove the duplicates in list?
+2.find out the repeating characters in list?
+3.most repeated charcters in list?
+4. combined the nested list into single list?
+5.Longest common prefix?
+6.Reverse a string?
+7.Find the first non-repeating character in a string
+8.Find the longest substring without repeating characters?
+9.Find Missing Number in an list or array?
+10. Find the Second Largest Number in a List?
+11.Find the Maximum Number in a List?
+12.Count Occurrences of Each Element in a List
+13. Sum of Digits of a Number
+14. Find the Largest and Smallest Elements in a List
+
+
+
+
+1.remove the duplicates in list?
+
+a = [1,2,4,4,6,6,8,4,2,34,55,2,5,3,2]
+b= []
+
+for i in a:
+    if i not in b:
+        b.append(i)
+print(b)
+
+----------------------------------------------------
+
+2.find out the repeating characters in list?
+
+a = [1,2,4,4,6,6,8,4,2,34,55,2,5,3,2]
+c = []
+d= {}
+for i in a:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+for i in d:
+    if d[i] > 1:
+        c.append(i)
+print(c)
+
+---------------------------------------------------------
+
+3.most repeated charcters in list?
+
+def most_repeated_chars(lst):
+    char_count = {}  # Dictionary to store character frequencies
+    for char in lst:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    # Find the maximum frequency
+    max_count = 0
+    for count in char_count.values():
+        if count > max_count:
+            max_count = count
+
+    # Find all characters with the max frequency
+    most_repeated = []
+    for char, count in char_count.items():
+        if count == max_count:
+            most_repeated.append(char)
+
+    return most_repeated, max_count  # Returning characters and their frequency
+
+# Example usage:
+chars = ['a', 'b', 'c', 'a', 'd', 'b', 'b', 'a']
+print(most_repeated_chars(chars))  # Output: (['a', 'b'], 3)
+
+
+------------------------------------------------------------------------------------------
+
+4. combined the nested list into single list?
+
+
+nested_list = [[1, 2, 3], [4, 5, [6, 7, 8]], [9, 10, [11, 12, 13, [14, 15, 16]]], [17]]
+
+single_list = []
+data = list(nested_list)
+
+while data:
+    item = data.pop(0)
+    if isinstance(item, list):
+      data = item + data
+    else:
+        single_list.append(item)
+print(single_list)
+
+
+-------------------------------------------------------------------------------------------------
+
+5.Longest common prefix?
+
+
+def longest_common_prefix(s):
+    data = s[0]
+    for i in s:
+        while not i.startswith(data):
+            data = data[:-1]
+            if not data:
+                return ''
+    return data
+s=["flower", "flow", "flight"]
+print(longest_common_prefix(s)) 
+
+
+s=["flower", "flow", "flight"]
+data = s[0]
+for i in s:
+    while not i.startswith(data):
+        data = data[:-1]
+        if not data:
+            print(None)
+print(data)
+
+
+------------------------------------------------------------------------------------------------------------
+6.Reverse a string?
+
+
+a= 'hello'
+data =''
+for i in a:
+    data = i + data
+print(data)
+
+------------------------------------------
+
+7.Find the first non-repeating character in a string
+
+
+def first_non_repeating(s):
+    f= {}
+    for i in s:
+        if i in f:
+            f[i] += 1
+        else:
+            f[i] = 1
+    for i in f:
+        if f[i] == 1:
+            return i
+    return None
+print(first_non_repeating('swiss'))
+
+
+
+s= 'swiss'
+f= {}
+for i in s:
+    if i in f:
+        f[i] += 1
+    else:
+        f[i] = 1
+for i in s:
+    if f[i] == 1:
+        print(i)
+        break
+else:
+    print(None)
+
+
+----------------------------------------------------------------
+
+8.Find the longest substring without repeating characters?
+
+s = "abcabcbb"
+di = {}
+max_length = 0
+start = 0
+
+for index, i in enumerate(s):
+    if i in di and di[i] >= start:
+        start = di[i] + 1
+    di[i] = index
+    max_length = max(max_length, index-start+1)
+print(max_length)
+
+
+----------------------------------------------------------------
+
+9.Find Missing Number in an list or array?
+
+
+def find_missing(arr, n):
+    total = n * (n + 1) // 2  # Sum of first n natural numbers
+    sum_arr = 0
+    for num in arr:
+        sum_arr += num
+    return total - sum_arr
+
+# Example
+print(find_missing([1, 2, 4, 5, 6], 6))  # Output: 3
+
+
+--------------------------------------------------------------------------
+
+10. Find the Second Largest Number in a List?
+
+
+def second_largest(arr):
+    max_num = second_max = float('-inf')
+    for num in arr:
+        if num > max_num:
+            second_max = max_num
+            max_num = num
+        elif num > second_max and num != max_num:
+            second_max = num
+    return second_max
+
+# Example
+print(second_largest([10, 20, 4, 45, 99]))  # Output: 45
+
+
+--------------------------------------------------------------------------------
+
+11.Find the Maximum Number in a List?
+
+def find_max(arr):
+    max_num = arr[0]
+    for num in arr:
+        if num > max_num:
+            max_num = num
+    return max_num
+
+# Example
+print(find_max([1, 5, 3, 9, 2]))  # Output: 9
+
+
+-------------------------------------------------------------------------
+
+12. Count Occurrences of Each Element in a List?
+
+
+def count_occurrences(lst):
+    counts = {}
+    for num in lst:
+        if num not in counts:
+            counts[num] = 1
+        else:
+            counts[num] += 1
+    return counts
+
+print(count_occurrences([1, 2, 2, 3, 4, 4, 4]))  # Output: {1: 1, 2: 2, 3: 1, 4: 3}
+
+
+
+------------------------------------------------------------------------------------------
+
+
+13.Sum of Digits of a Number
+
+
+def sum_of_digits(n):
+    total = 0
+    while n > 0:
+        total += n % 10
+        n //= 10
+    return total
+
+print(sum_of_digits(1234))  # Output: 10
+
+
+--------------------------------------------------------------
+
+14. Find the Largest and Smallest Elements in a List
+
+def find_min_max(lst):
+    min_val = max_val = lst[0]
+    for num in lst:
+        if num < min_val:
+            min_val = num
+        if num > max_val:
+            max_val = num
+    return min_val, max_val
+
+print(find_min_max([4, 2, 8, 1, 9]))  # Output: (1, 9)
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+https://chatgpt.com/share/67eebce0-d2f0-8010-8e22-ae8d23fefabd
+
+
+
+
+Django:
+
+What is django?
+difference between django, flask and fastapi?
+what is orm?
+difference between orm and raw sql?
+which one is gives the data after adding the filter orm or raw sql?
+what is authentication and its types?
+what is the use of settings and we placed in that settings.py file 
+what is class meta?
+what is middleware and it use?
+what is MVT architecture in django?
+What are Django signals? How are they used?
+What is the difference between ForeignKey, OneToOneField, and ManyToManyField?
+How do you optimize database queries in Django?
+What are querysets and managers in Django?
+what is path parameters and queries?
+
+
+
+
+
+
+Flask:
+What is Flask, and how is it different from Django?
+What are Flask Blueprints?
+Explain the Flask application lifecycle.
+What is the role of app.run() in Flask?
+How does Flask handle routing?
+How do you pass data between Flask routes?
+What is the difference between GET and POST requests in Flask?
+How do you handle form validation in Flask?
+What are Flask extensions? Name a few commonly used extensions.
+How do you connect a Flask application to a database?
+How does Flask handle request and response objects?
+How do you implement authentication and authorization in Flask?
+How do you use Flask-SQLAlchemy?
+What is Jinja2 templating in Flask?
+How do you handle file uploads in Flask?
+What is Flask-RESTful, and how is it used?
+How can you implement JWT authentication in Flask?
+What are Flask middlewares, and how do you create custom middleware?
+How do you deploy a Flask application?
+How does Flask handle background tasks?
+what is path parameters and queries?
+
+
+
+FastAPI:
+
+
+What is FastAPI, and how is it different from Django and Flask?
+What are the main features of FastAPI?
+Explain how FastAPI handles asynchronous programming.
+What is Pydantic in FastAPI, and how is it used?
+How do you define a request and response model in FastAPI?
+What is dependency injection in FastAPI?
+How does FastAPI handle path parameters and query parameters?
+How do you implement authentication and authorization in FastAPI?
+What is the purpose of @app.get(), @app.post(), and other HTTP method decorators?
+How do you serve static files in FastAPI?
+How does FastAPI handle background tasks?
+What are middleware in FastAPI, and how do you create one?
+How do you use WebSockets in FastAPI?
+How do you handle database connections in FastAPI?
+How do you implement OAuth2 authentication in FastAPI?
+What is the use of Depends in FastAPI?
+How do you integrate FastAPI with databases like PostgreSQL or MongoDB?
+How do you handle error handling in FastAPI?
+What is ASGI, and how is it related to FastAPI?
+How do you deploy a FastAPI application?
+
+
+
+
+SQL and MongoDB:
+
+SQL:
+what is SQL?
+what are the types of joins and explain it ?
+Difference between sql and MongoDB?
+difference between where and having?
+what is limit and offset?
+
+
+
+
+Second highest value in the table?
+sum of the data in that salary column?
+
+
+
+MongoDB:
+
+
+What is the use of nosql as compaired to sql?
+mongodb is  retrieve and filter the data faster than sql or not?
+mongodb is json data or not ?
+
+
+
+
+https://chatgpt.com/share/67eebce0-d2f0-8010-8e22-ae8d23fefabd
+
+
+
+Docker:
+
+What is Docker?
+What are Docker containers?
+What is the difference between Docker and Virtual Machines (VMs)?
+What is Docker Hub?
+Explain the architecture of Docker.
+What is a Docker image?
+What is the difference between docker run and docker start?
+What are the main components of a Docker container?
+What is the purpose of a Dockerfile?
+How do you list all Docker containers and images?
+What are Docker Volumes?
+How do you create a Docker container from an image?
+What is the purpose of the docker exec command?
+What is Docker Compose?
+What is the difference between docker pull and docker build?
+How can you restrict the amount of memory or CPU a Docker container can use?
+How do you inspect a Docker container?
+What are Docker Swarm and Kubernetes, and how do they relate to Docker?
+What are Docker tags, and why are they useful?
+What is the difference between docker run and docker create?
+What is the purpose of the docker build command?
+How do you scale applications using Docker Swarm?
+What is a multi-stage build in Docker?
+How do you handle environment variables in Docker?
+What is the purpose of Docker's --link flag?
+How do you push a Docker image to Docker Hub?
+How do you debug issues inside a Docker container?
+
+
+
+
+AWS:
+
+What is AWS?
+What are the different types of cloud services in AWS?
+What are AWS regions and availability zones?
+What is EC2 (Elastic Compute Cloud)?
+What is S3 (Simple Storage Service)?
+What is IAM (Identity and Access Management)?
+What is an Elastic Load Balancer (ELB)?
+What is CloudFormation in AWS?
+What is the difference between AWS S3 and EBS (Elastic Block Storage)?
+What is the AWS Shared Responsibility Model?
+What is an AWS VPC (Virtual Private Cloud)?
+Explain the difference between public and private subnets in AWS VPC.
+What is AWS Lambda?
+What is Auto Scaling in AWS?
+What is Amazon RDS (Relational Database Service)?
+What are Security Groups and Network ACLs?
+What is AWS Route 53?
+Explain the difference between EBS and EFS.
+What is AWS CloudWatch?
+What are AWS snapshots, and how do they work?
+What is AWS Elastic Beanstalk?
+Explain the difference between AWS CloudTrail and CloudWatch.
+What is AWS Kinesis?
+What are AWS SQS (Simple Queue Service) and SNS (Simple Notification Service)?
+What is the purpose of AWS Direct Connect?
+How does AWS handle disaster recovery?
+What is AWS WAF (Web Application Firewall)?
+What are the best practices for AWS cost optimization?
+What is AWS Step Functions?
+What is the AWS Well-Architected Framework?
+
+
+
+
+https://chatgpt.com/share/67eebce0-d2f0-8010-8e22-ae8d23fefabd
+
+
+
