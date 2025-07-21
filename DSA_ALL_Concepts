@@ -1,0 +1,264 @@
+ARRAYS:
+1. basic operations
+2. Sorting
+3. searching
+4. Prefix sum
+5. Sliding windows
+6. Two pointer technique
+7. Kadane's Algorithm
+8. Merging Itervals
+
+
+STRINGS:
+1. Basic operations
+2. Pattern Matching
+3. Palindrome
+4. Anagrams
+5. Substring searching
+6. Character Frequency
+7. String Hashing
+
+
+LINKED LIST:
+1. Single Linked List
+2. Doubly Linked List
+3. Circular Linked List
+4. Fast and slow Pointers
+5. Cycle Detection
+6. Reversal
+
+
+STACK:
+1. Basic operations
+2. Infix, Prefix, Postfix Expressions
+3. Next Greater / Smaller Element
+4. Balanced Parenthesis
+5. Stack with Min/Max Support
+
+
+QUEUE:
+1. Basic Operations
+2. Deque
+3. Circular Queue
+4. Sliding Window Maximum
+5. Queue using Stack
+6. BFS Traversal
+
+
+TREE:
+1. Binary tree
+2. Binary Search Tree
+3. Tree Traversals(Inorder,Preorder,Postorder)
+4. Height and Depth of Tree
+5. Lowest Common Ancestor
+6. AVL Tree
+7. Segment Tree
+8. Trie
+
+
+GRAPH:
+1. Graph Representations
+2. BFS and DFS
+3. Shortest Path(Dijkstra, Bellman-Ford)
+4. Minimum spanning Tree
+5. Topological Sort 
+6. Union-Find
+
+
+HASHING:
+1. Hash Tables
+2. Hash sets and Maps
+3. Collision Handling
+4. Counting Frequencies
+5. Caching(LRU Cache)
+
+
+HEAP:
+1. Min Heap and Max Heap
+2. Priority Queue
+3. Kth Largest/Smallest Element
+4. Heap Sort
+
+
+RECURSION AND BACKTRACKING:
+1. Basic Recursion
+2. Subset and Permutation Generation
+3. N-Queens
+4. Sudoku Solver
+5. Rat in a Maze
+6. Word Search
+
+
+DYNAMIC PROGRAMMING (DP):
+
+1. 1D DP PROBLEMS:
+
+    1. Fibonacci Series
+    2. Climbing Stairs
+    3. House Robber Problem
+    4. Maximum Subarray sum(KADANE'S Algorithm)
+    5. Coin Change(Min coins to make amount)
+
+2.  2D DP PROBLEMS:
+    1. Longest Commom subsequence
+    2. Longest Palindromic substring
+    3. Edit Distance 
+    4. Unique Paths
+    5. 0/1 Knapsack Problem
+
+
+3. ADVANCED DP:
+    1. DP with Bitmasking
+    2. DP on Trees
+    3. DP with Memoization and Tabulation Approaches
+    
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+ARRAYS & STRINGS:
+
+1. two sum
+2. best time to buy and sell stock
+3. product of array except self
+4. maximum subarray(kadane's aalgorithm)
+5. merge intervals
+6. find minimum in rotated sorted array
+7. search in rotated sorted array
+8. 3 sum
+9. container with most water
+10. subarray sum equals k
+11. valid palindrome
+12. longest substring without repeating characters
+13. longest palindromic substring
+14. group anagrams
+15. valid parentheses
+16. minimum window substring
+17. trapping rain water
+18. jump game
+19. rotate image
+20. spiral matrix
+21. sliding window maximum (added for its frequent appearance in interviews)
+
+
+LINKED LISTS:
+
+1. reverse a linked lists
+2. detect cycle in a linked list (Floyd's algorithm)
+3. merge two sorted lists
+4. remove Nth node from end of list
+5. add two number (linked list)
+6. intersection of two linked lists
+7. copy list with random pointer
+8. LRU Cache (design)
+9. Palindrome linked list
+10. Flatten a multilevel double linked list
+
+
+TREES:
+
+1. maximum depth of binary tree
+2. validate binary search tree
+3. invert binary tree
+4. binary tree level order traversal
+5. serialize and deserialize binary tree
+6. lowest common ancestor (LCA) of a binary tree
+7. subtree of another tree
+8. construct binary tree from preorder and inorder traversal
+9. Kth smallest element in a BST
+10. binary tree maximum path sum
+
+
+GRAPHS:
+
+1. Clone graph
+2. course schedule (topological sort)
+3. number of islands(DFS/BFS)
+4. pacific atlantic water flow
+5. word ladder(BFS)
+6. alien dictionary (tpological sort)
+7. cheapest flights within K stops (Dijkstra's/ Bellman-Ford)
+8. network delay time (Dijkstra's)
+9. minimum height trees (centroid BFS)
+10. graph valid tree (uNION-find)
+
+
+
+HEAPS & PRIORITY QUEUES:
+
+1. Kth largest element in a stream
+2. find medium from data stream
+3. top K frequent element
+4. K closest points to origin
+5. task scheduler
+
+
+STACKS & QUEUES:
+
+1. Implement queue using stacks
+2. implement stack using queues
+3. min stack
+4. evaluate reverse polish notation next
+5. greater element (monotonic stack)
+
+
+DYNAMIC PROGRAMMING:
+
+1. Climbing stairs
+2. coin change
+3. longest increasing subsequence
+4. word break
+5. house robber
+6. unique paths
+7. decode ways
+8. edit distance
+9. maximum product subarray
+10. partition equal subset sum
+11. longest palindromic subsequence (added as another classic DP problem)
+
+
+
+BACKTRACKING:
+
+1. subsets
+2. permutations
+3. combination sum
+4. generate parentheses
+5. sudoku solver
+6. N-Queens
+7. palindrome partitioning
+8. letter combinations of a phone number
+9. restore IP addresses
+10. word search
+
+
+
+BINARY SEARCH:
+
+1. Find first and last position of an element
+2. search a 2D matrix
+3. Median of two sorted arrays
+4. Sqrt(x)
+5. koko Eating Bananas
+6. Capacity to ship packages within D days
+7. Split Array largest sum
+8. H-index II
+9. Time based Key-Value Store
+
+
+
+HASH TABLES & TRIES:
+
+1. Implemented trie (prefix tree)
+2. design hashmap
+3. first unique character in a string
+4. longest consecute sequence
+
+
+MISCELLANEOUS:
+
+1. set matrix zeroes
+2. find the duplicate number (Floyd's Algorithm)
+3. Queue reconstruction by height
+4. insert interval
+5. longest valid parentheses (added to complete the list)
+
